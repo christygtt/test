@@ -1,0 +1,505 @@
+"drawmDot();";
+"drawBackground();";
+"drawFlower();";
+"drawGroud();";
+"drawSnow();";
+"drawMountain();";
+"drawClouds();";
+"drawSun();";
+"drawPic();";
+"drawTrunk();";
+// draws blue background
+drawBackground();
+function drawBackground () {
+penColor("LightBlue");
+dot(500);
+}
+// draws yellows sun behind mountains
+drawPic();
+function drawPic() {
+hide();
+drawSun();
+function drawSun() {
+moveTo(195, 140);
+penRGB(250, 170, 100, 1);
+dot(40);
+}
+// draws clouds at top of sky
+// draws white puffy clouds
+drawClouds();
+function drawClouds() {
+// sets up pen
+penUp();
+moveTo(0, 77);
+penDown();
+penRGB(240, 240, 240);
+// colors in the white of clouds
+for (var i = 0; i < 4; i++) {
+turnRight(118);
+arcLeft(100, 60);
+}
+penUp();
+moveTo(0, 50);
+penDown();
+penRGB(240, 240, 240);
+for (var i = 0; i < 4; i++) {
+turnRight(100);
+arcLeft(122, 50);
+}
+for (var i = 0; i < 50; i++) {
+penUp();
+moveTo(randomNumber(550, 30), randomNumber(70, 20));
+penDown();
+penRGB(240, 240, 240, 0.5);
+dot(50);
+ 
+}
+}
+// draws mountains with snow tops behind stone wall
+penUp();
+moveTo(0, 219);
+drawMountain();
+penUp();
+moveTo(85, 219);
+turnRight(30);
+turnLeft(200);
+drawMountain();
+penUp();
+moveTo(200, 219);
+turnRight(30);
+turnLeft(200);
+drawMountain();
+penUp();
+moveTo(49, 209);
+drawmDot();
+penUp();
+moveTo(140, 209);
+drawmDot();
+penUp();
+moveTo(245, 216);
+drawmDot();
+penUp();
+moveTo(20, 135);
+drawSnow();
+penUp();
+moveTo(113, 125);
+penDown();
+turnRight(250);
+turnLeft(30);
+drawSnow();
+penUp();
+moveTo(225, 142);
+penDown();
+turnRight(250);
+turnLeft(40);
+drawSnow();
+penUp();
+moveTo(49, 116);
+drawDot();
+penUp();
+moveTo(145, 115);
+drawDot();
+penUp();
+moveTo(255, 130);
+drawDot();
+// draws overlapping mountains
+function drawMountain() {
+penDown();
+penRGB(250, 230, 220, 1);
+penWidth(60);
+turnRight(50);
+moveForward(100);
+turnRight(120);
+moveForward(100);
+}
+// draws triangle of snow on top of mountain
+function drawSnow() {
+penDown();
+penRGB(222, 222, 222, 1);
+penWidth(17);
+turnLeft(120);
+moveForward(50);
+turnRight(107);
+moveForward(53);
+turnRight(90);
+arcRight(60, 25);
+turnLeft(50);
+arcRight(60, 35);
+}
+function drawDot() {
+penDown();
+penRGB(222, 222, 222, 1);
+dot(23);
+}
+function drawmDot() {
+penDown();
+penRGB(250, 230, 220, 1);
+dot(45);
+}
+}
+// draws the stone wall with black arches
+// sets up pen
+penUp();
+moveTo(0, 280);
+turnRight(145);
+penDown();
+// draws gray wall
+penWidth(120);
+penRGB(160, 160, 160);
+moveForward(320);
+penRGB(120, 180, 200);
+penRGB(120, 180, 200);
+penUp();
+// draws arches on wall
+moveTo(0, 340);
+penDown();
+penWidth(3);
+turnLeft(90);
+penColor("black");
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+penUp();
+moveTo(0, 330);
+penDown();
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+penUp();
+moveTo(0, 320);
+penDown();
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+penUp();
+moveTo(0, 310);
+penDown();
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+penUp();
+moveTo(0, 300);
+penDown();
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+penUp();
+moveTo(0, 290);
+penDown();
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+penUp();
+moveTo(0, 280);
+penDown();
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+penUp();
+moveTo(0, 270);
+penDown();
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+penUp();
+moveTo(0, 260);
+penDown();
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+penUp();
+moveTo(0, 250);
+penDown();
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+penUp();
+moveTo(0, 240);
+penDown();
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+arcRight(180, 15);
+turnLeft(180);
+penUp();
+// draws the ground and red flowers and grass spots
+moveTo(0, 230);
+//sets up pen
+penDown();
+penUp();
+// draws ground
+drawGround();
+drawFlower(40, 375);
+drawFlower(69, 420);
+drawFlower(120, 410);
+drawFlower(195, 430);
+drawFlower(281, 392);
+drawFlower(225, 370);
+function drawGround() {
+moveTo(160, 892);
+penDown();
+penRGB(110, 200, 110);
+dot(575);
+show();
+penUp();
+}
+// draw flower
+function drawFlower(xval, yval) {
+moveTo(xval, yval);
+penRGB(90, 170, 90);
+penDown();
+penWidth(3);
+arcLeft(randomNumber(10, 60), 25);
+penUp();
+moveTo(xval, yval);
+penDown();
+turnTo(0);
+penWidth(3);
+arcRight(randomNumber(45, 70), 25);
+penUp();
+moveTo(xval, yval);
+penDown();
+turnTo(0);
+moveForward(25);
+penRGB(220, 90, 90);
+dot(5);
+penUp();
+hide();
+// draws all parts of tree
+// base of tree
+drawTrunk();
+function drawTrunk() {
+penColor("brown");
+penUp();
+penWidth(25);
+moveTo(160,385);
+penDown();
+moveForward(115);
+penUp();
+// draws main tree
+// sets up pen
+moveTo(148,324);
+turnLeft(90);
+hide();
+penColor("green");
+penWidth(15);
+penDown();
+moveForward(50);
+// drawing the main tree
+show();
+turnRight(113);
+moveForward(175);
+turnRight(136);
+moveForward(170);
+turnRight(110);
+moveForward(54);
+hide();
+penUp();
+}
+// tree color
+hide();
+moveTo(164,278);
+dot(52);
+moveTo(165,211);
+dot(25);
+moveTo(205,300);
+dot(17);
+moveTo(120, 302);
+dot(17);
+}
